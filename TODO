@@ -1,0 +1,13 @@
+
+Todo:
+	✔ Parsear AppInfos @done(20-03-18 22:20)
+	✔ Almacenar información del system map @done(20-03-21 00:33)
+	✔ Dar información sobre las apps instaladas @done(20-03-21 00:34)
+	✔ Función para instalar apps por paquetes @done(20-03-21 01:20)
+	✔ Función para desinstalar aplicaciones @done(20-03-21 19:09)
+	✔ Recompilar mapa de aplicaciones @done(20-03-22 23:35)
+		✔ Copiar AppInfos @done(20-03-21 01:20) (Hecho en la instalación)
+		✔ Mover todos los datos de las apps a sus subcarpetas @done(20-03-21 01:21) (Hecho en la instalación)
+		✔ Recrear app_loader.h @done(20-03-22 23:34)
+		✔ Recrear app_list.h @done(20-03-22 23:35)
+	☐ Función para subir los cambios realizados al arduino (Necesita research)

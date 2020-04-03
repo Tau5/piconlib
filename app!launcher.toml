@@ -1,0 +1,10 @@
+[app]
+name = "Launcher"
+main_header = "app_launcher.h"
+
+[functions]
+init = "launcher_init"
+loop = "launcher"
+
+[flags]
+hidden = true
