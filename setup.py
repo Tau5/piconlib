@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="piconlib-Tau5", # Replace with your own username
+    name="piconlib", # Replace with your own username
     version="0.0.1",
     author="Tau5",
     author_email="tau0@tutanota.com",
