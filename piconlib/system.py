@@ -4,12 +4,12 @@ import os
 # https://stackoverflow.com/a/1994840
 import shutil, errno
 def copy(src, dst):
-    try:
-        shutil.copytree(src, dst)
-    except OSError as exc: # python >2.5
-        if exc.errno == errno.ENOTDIR:
-            shutil.copy(src, dst)
-        else: raise
+	try:
+		shutil.copytree(src, dst)
+	except OSError as exc: # python >2.5
+		if exc.errno == errno.ENOTDIR:
+			shutil.copy(src, dst)
+		else: raise
 
 class SystemTree:
 	def __init__(self, map_path):
@@ -51,15 +51,15 @@ class SystemTree:
 
 	def remove_app(self, app_name):
 		name = app_name.lower()
-		shutil.rmtree(self.path+"/apps/"+name)
-		os.remove(self.path+"/apps_info/"+name+".toml")
+		"""shutil.rmtree(self.path+"/apps/"+name)
+		os.remove(self.path+"/apps_info/"+name+".toml")"""
 		f = open(self.path+"/apps_active", "r+")
 		old_active_apps = f.readlines()
 		active_apps = list()
 		for app in old_active_apps:
-			if (name != app):
+			if (name != str.strip(app)):
 				active_apps.append(app)
-				print(app)
+				print(name, app)
 		
 		active_apps = list(map(str.strip, active_apps))
 		f.truncate(0)
