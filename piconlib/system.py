@@ -19,11 +19,12 @@ class SystemTree:
 		apps = []
 		from os import walk
 		f = []
-		for (dirpath, dirnames, filenames) in walk(self.path+"/apps_info"):
-			f.extend(filenames)
+		for (dirpath, dirnames, filenames) in walk(self.path+"/apps_info/"):
+			f = filenames
 			break
 		for app_path in f:
 			apps.append(parse.parse_appinfo(self.path+"/apps_info/"+app_path))
+		return apps
 
 	def get_enabled_apps(self):
 		f = open(self.path+"/apps_active", "r+")
