@@ -15,7 +15,6 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     classifiers=[
         "Operating System :: OS Independent",
-        "Arduino"
     ],
     python_requires='>=3.6',
 )
