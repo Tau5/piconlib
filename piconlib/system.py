@@ -51,8 +51,8 @@ class SystemTree:
 
 	def remove_app(self, app_name):
 		name = app_name.lower()
-		"""shutil.rmtree(self.path+"/apps/"+name)
-		os.remove(self.path+"/apps_info/"+name+".toml")"""
+		shutil.rmtree(self.path+"/apps/"+name)
+		os.remove(self.path+"/apps_info/"+name+".toml")
 		f = open(self.path+"/apps_active", "r+")
 		old_active_apps = f.readlines()
 		active_apps = list()
@@ -67,7 +67,6 @@ class SystemTree:
 		f.write("\n".join(active_apps))
 		print("\n".join(active_apps))
 		f.close()
-
 
 	#Required when removing and installing applications
 	def refresh_apploader(self):

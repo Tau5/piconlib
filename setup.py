@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="piconlib", # Replace with your own username
-    version="0.0.2",
+    version="0.0.3",
     author="Tau5",
     author_email="tau0@tutanota.com",
     description="A library to interact with Picon's system tree",
